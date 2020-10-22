@@ -1,21 +1,22 @@
 package Part2;
 
-public class Cuboid extends Rectangle {
+public class Cuboid extends Shape {
 
     private double height;
-    private Rectangle rect;
+    private double width;
+    private double length;
+    private Rectangle rectA;
+    private Rectangle rectB;
+    private Rectangle rectC;
 
     public Cuboid(double width, double length, double height) {
-        super(width, length);
+        this.length = length;
+        this.width = width;
         this.height = height;
+        this.rectA = new Rectangle(this.height, this.length);
+        this.rectB = new Rectangle(this.height, this.width);
+        this.rectC = new Rectangle(this.length, this.width);
     }
-
-    double cuboidLength = super.getLength();
-    double cuboidWidth = super.getWidth();
-
-    private Rectangle rectA = new Rectangle(this.height, cuboidLength);
-    private Rectangle rectB = new Rectangle(this.height, cuboidWidth);
-    private Rectangle rectC = new Rectangle(cuboidWidth, cuboidLength);
 
     public double calArea() {
         return 2 * (rectA.calArea() + rectB.calArea() + rectC.calArea());
@@ -26,17 +27,10 @@ public class Cuboid extends Rectangle {
     }
 
     public double getWidth() {
-        return super.getWidth();
+        return this.width;
     }
 
     public double getLength() {
-        return super.getLength();
+        return this.length;
     }
-
-    public static void main(String[] args) {
-        Cuboid cuboid = new Cuboid(1, 2, 3);
-
-        System.out.println(cuboid.calArea());
-    }
-
 }
