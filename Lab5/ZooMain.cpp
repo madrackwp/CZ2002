@@ -4,6 +4,8 @@
 #include "animal.h"
 #include "mammal.h"
 
+//To build: g++ -o Animal.exe ZooMain.cpp
+
 int main()
 {
     Animal *zoo[3];
@@ -40,20 +42,23 @@ int main()
     else if (userChoice == 4)
     {
         Dog dog = Dog("Lassie", White, "Andy");
-        Cat cat = Cat("Whiskers", White);
-        Lion lion = Lion("Simba", Brown);
-        zoo[0] = &dog;
-        zoo[1] = &cat;
-        zoo[2] = &lion;
         dog.move();
         dog.speak();
         dog.eat();
+
+        Cat cat = Cat("Whiskers", White);
         cat.move();
         cat.speak();
         cat.eat();
+
+        Lion lion = Lion("Simba", Brown);
         lion.move();
         lion.speak();
         lion.eat();
+
+        zoo[0] = &dog;
+        zoo[1] = &cat;
+        zoo[2] = &lion;
     }
     else
     {

@@ -30,6 +30,11 @@ public:
     {
         cout << "Dog moves" << endl;
     }
+
+    void eat()
+    {
+        cout << "Dog eats a bone" << endl;
+    }
 };
 
 #endif

@@ -31,9 +31,27 @@ public:
     {
         _name = n;
         _color = c;
-        cout << "Color of animal is " << COLOR(c) << c << endl;
+        // cout << "Color of animal is " << COLOR(c) << c << endl;
         cout << "Name of animal is " << _name << endl;
-    }
+        switch (c)
+        {
+        case Green:
+            cout << "Color of animal is Green" << endl;
+            break;
+        case Blue:
+            cout << "Color of animal is Blue" << endl;
+            break;
+        case White:
+            cout << "Color of animal is White" << endl;
+            break;
+        case Black:
+            cout << "Color of animal is Black" << endl;
+            break;
+        case Brown:
+            cout << "Color of animal is Brown" << endl;
+            break;
+        }
+        }
 
     ~Animal()
     {

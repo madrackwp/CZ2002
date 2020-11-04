@@ -18,6 +18,15 @@ public:
     {
         cout << "Cat goes meow" << endl;
     }
+    void move()
+    {
+        cout << "Cat moves" << endl;
+    }
+
+    void eat()
+    {
+        cout << "Cat eats a fish" << endl;
+    }
 };
 
 #endif
